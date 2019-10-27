@@ -20,8 +20,12 @@ import java.util.Map;
 @Service
 public class UserServiceImpl implements UserService {
 
+    private final UserRepository userRepository;
+
     @Autowired
-    private UserRepository userRepository;
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     public Page<User> findAll(PaginationCriteria paginationCriteria, int pageNumber) {
@@ -70,6 +74,11 @@ public class UserServiceImpl implements UserService {
         return applicationLogEntityPage;
     }
 
+    /**
+     * check value is number or not
+     * @param strNum input parameter for check
+     * @return true / false
+     */
     private boolean isNumeric(String strNum) {
         try {
             double d = Double.parseDouble(strNum);
