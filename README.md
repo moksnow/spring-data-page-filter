@@ -4,8 +4,11 @@ enable pagination, sorting and filtering on the server side. The jquery datatabl
 
 # Technologies
 The following technologies are used:
-- spring boot 2.2.0
-- jquery datatable
+- Hibernate Jpamodelgen
+- H2 Database 1.4.199
+- JQuery 3.3.1
+- Maven 4.0.0
+- Spring Boot 2.2.0
 
 
 # Usage
